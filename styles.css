@@ -1,0 +1,45 @@
+:root{
+  --blue:#0d4f86;
+  --gray:#666;
+  --bg:#f7f9fb;
+  --card:#ffffff;
+  --radius:8px;
+  --maxwidth:1100px;
+}
+*{box-sizing:border-box}
+body{font-family:Arial, sans-serif;margin:0;color:#222;background:var(--bg);line-height:1.6}
+.container{max-width:var(--maxwidth);margin:0 auto;padding:24px}
+.header-flex{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{width:64px;height:64px;object-fit:contain}
+.brand h1{margin:0;font-size:22px;color:var(--blue)}
+.tag{font-size:13px;color:var(--gray);text-transform:uppercase;letter-spacing:0.6px}
+
+.top-nav button{background:none;border:1px solid var(--blue);padding:8px 12px;border-radius:6px;color:var(--blue);cursor:pointer}
+
+.hero{display:flex;gap:20px;align-items:center;margin-top:12px}
+.hero-text{flex:1}
+.hero-card{width:260px}
+.hero-card img{width:100%;border-radius:10px;box-shadow:0 6px 18px rgba(13,79,134,0.12)}
+
+h2{font-size:26px;margin:6px 0 12px}
+.cards{display:flex;gap:14px;flex-wrap:wrap}
+.card{background:var(--card);padding:16px;border-radius:8px;flex:1;min-width:220px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+.services h3, .pricing h3, .about h3, .contact h3{margin-top:36px;margin-bottom:14px}
+
+.price-list{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.price-list li{background:var(--card);padding:12px;border-radius:8px;box-shadow:0 6px 12px rgba(0,0,0,0.03)}
+
+.contact form{display:grid;gap:8px;max-width:520px}
+.contact input,.contact select{padding:10px;border:1px solid #ddd;border-radius:6px}
+.btn{display:inline-block;padding:10px 14px;background:var(--blue);color:#fff;border-radius:6px;text-decoration:none}
+.btn.outline{background:transparent;border:1px solid var(--blue);color:var(--blue)}
+
+.site-footer{background:#fff;margin-top:28px;padding:12px;border-top:1px solid #eee;text-align:center;font-size:13px;color:var(--gray)}
+
+/* Responsive */
+@media (max-width:880px){
+  .hero{flex-direction:column}
+  .hero-card{width:100%}
+  .cards{flex-direction:column}
+}
